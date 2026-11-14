@@ -1,1 +1,27 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>₹30 UPI Payment</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- QR Code Library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Scan & Pay ₹30</h1>
+    <p class="subtitle">Only ₹30 payment is pre-filled in UPI apps</p>
+
+    <div class="qr-box">
+      <canvas id="qrCanvas"></canvas>
+    </div>
+
+    <p class="upi-id" id="upiIdText"></p>
+    <p class="note">Scan with PhonePe, Google Pay, Paytm, or any UPI app</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
