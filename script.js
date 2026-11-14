@@ -9,24 +9,13 @@ const CURRENCY = "INR";
 // UPI deep link generate karein
 const upiLink = `upi://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(PAYEE_NAME)}&am=${AMOUNT}&cu=${CURRENCY}`;
 
-// Page load hone par QR code render karein
+// Free QR API ka use karke Image ka URL banayein
+const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(upiLink)}`;
+
 window.onload = function () {
-  const canvas = document.getElementById("qrCanvas");
-
-  QRCode.toCanvas(canvas, upiLink, {
-    width: 220,
-    margin: 2,
-    color: {
-      dark: "#1a1a1a",
-      light: "#ffffff"
-    }
-  }, function (error) {
-    if (error) {
-      console.error("QR Code generation failed:", error);
-      alert("QR Code generate nahi hua. Please refresh karein.");
-    }
-  });
-
+  // Image tag me URL daal dein
+  document.getElementById("qrImage").src = qrApiUrl;
+  
   // UPI ID text display karein
   document.getElementById("upiIdText").innerText = UPI_ID;
 };
