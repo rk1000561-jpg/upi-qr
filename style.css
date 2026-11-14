@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -14,38 +14,67 @@ body {
 }
 
 .container {
-  background: #fff;
+  background: #ffffff;
   padding: 30px 25px;
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   text-align: center;
   max-width: 360px;
   width: 100%;
+  margin: 20px;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 26px;
   color: #1a1a1a;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  font-weight: 700;
 }
 
 .subtitle {
   font-size: 14px;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+/* QR Code Box ki styling */
 .qr-box {
   background: #fafafa;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 16px;
   display: inline-block;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
 }
 
-#qrCanvas {
+/* Container jo QR aur Logo ko hold karega */
+.qr-container {
+  position: relative;
+  display: inline-block;
   width: 220px;
   height: 220px;
+}
+
+#qrImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Logo ki styling (QR ke upar) */
+.qr-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45px; /* Logo ka size (chhota ya bada karne ke liye isko badlein) */
+  height: 45px;
+  background-color: #ffffff; /* Logo ke peeche white background */
+  padding: 4px;
+  border-radius: 8px; /* 50% karenge toh gol (round) ho jayega */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
 }
 
 .upi-id {
@@ -56,7 +85,8 @@ h1 {
   padding: 8px 16px;
   border-radius: 8px;
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  word-break: break-all;
 }
 
 .note {
