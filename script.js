@@ -1,7 +1,7 @@
 // ============================================
 // APNI DETAILS YAHAN BHAREIN
 // ============================================
-const UPI_ID = "sherrohit2@axl";      // apni UPI ID
+const UPI_ID = "rohitsher518@ybl";      // apni UPI ID
 const PAYEE_NAME = "Sher Rohit";       // apna naam
 const AMOUNT = "30.00";                // fixed ₹30
 const CURRENCY = "INR";
